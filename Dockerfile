@@ -2,10 +2,10 @@ FROM python:3.11-slim
 
 WORKDIR /app
 
-COPY src/requirement.txt .
+COPY src/requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY src/app.py .
+COPY src/ .
 
 ENV APP_VERSION=unknown
 ENV APP_ENV=unknown
